@@ -25,6 +25,14 @@ def gen_num():
     mylist.sort()
     result.set(mylist)
 
-btn = Button(root, text = "Calculate", command = gen_num)
-btn.place(x=130, y=140)
+def back():
+    root.destroy()
+    import tkinter_challenge_random_number
+
+
+btn1 = Button(root, text = "Calculate", command = gen_num)
+btn1.place(x=130, y=140)
+btn2 = Button(root, text = "Return To Start", command = back)
+btn2.place(x=130, y=180)
+
 root.mainloop()
