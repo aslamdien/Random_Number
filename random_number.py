@@ -3,12 +3,13 @@ import random
 
 root = Tk()
 root.title("Random Generator")
-root.geometry("400x400")
+root.geometry("350x300")
 
 result = StringVar()
-
-lab = Label(root, text = "", textvariable = result)
-lab.place(x=90, y=150)
+lab1 = Label(root, text = "And Your Numbers Are: ")
+lab1.place(x=20, y=100)
+lab2 = Label(root, text = "", textvariable = result)
+lab2.place(x=200, y=100)
 
 
 def gen_num():
@@ -25,5 +26,5 @@ def gen_num():
     result.set(mylist)
 
 btn = Button(root, text = "Calculate", command = gen_num)
-btn.place(x=130, y=200)
+btn.place(x=130, y=140)
 root.mainloop()

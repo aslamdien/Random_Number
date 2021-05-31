@@ -10,6 +10,9 @@ root = Tk()
 root.title("Username/Password")
 root.geometry("500x500")
 
+my_pic = PhotoImage(file = "image.png")
+background = Label(root, image = my_pic).place(x=100, y=170)
+
 lab1 = Label(root, text = "Please Enter Your Username:")
 lab1.place(x=5, y=10)
 ent1 = Entry(root)
@@ -42,6 +45,7 @@ def verify():
     if found == True:
         messagebox.showinfo("STATUS", "Access Granted!")
         root.destroy()
+        import random_number
 
     else:
         messagebox.showinfo("ERROR INFO", "Access Denied!!!")
