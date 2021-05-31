@@ -45,16 +45,23 @@ def verify():
     if found == True:
         messagebox.showinfo("STATUS", "Access Granted!")
         root.destroy()
-        import random_number
+        import age_determine
 
     else:
         messagebox.showinfo("ERROR INFO", "Access Denied!!!")
         ent1.delete(0, END)
         ent2.delete(0, END)
 
+
+def exit():
+    root.destroy()
+
+
 btn1 = Button(root, text = "Verify", command = verify)
 btn1.place(x=100, y=100)
 btn2 = Button(root, text = "Clear", command = clear)
 btn2.place(x=200, y=100)
+btn3 = Button(root, text = "Exit", command = exit)
+btn3.place(x=300, y=100)
 
 root.mainloop()
